@@ -1,0 +1,24 @@
+{
+  "session_info": {
+    "start_time": "2025-05-04T17:35:27.801010",
+    "end_time": "2025-05-04T17:35:50.361754",
+    "duration_seconds": 22.560744
+  },
+  "analysis_summary": {
+    "gaze tracker": {
+      "most_common_gaze": "center",
+      "blink_count": 0
+    },
+    "head pose": {
+      "most_common_head_pose": "forward"
+    },
+    "emotion": {
+      "most_common_emotion": "Sad"
+    }
+  },
+  "focus_analysis": {
+    "focused_frames": 3,
+    "total_frames": 53,
+    "focus_percentage": 5.660377358490567
+  }
+}
