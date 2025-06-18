@@ -1,22 +1,17 @@
-# Use a Python base image
 FROM python:3.10-slim
 
-# Install system dependencies for dlib
+
 RUN apt-get update && apt-get install -y \
     cmake \
     build-essential \
     libboost-all-dev \
-    && apt-get clean
+ && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory
 WORKDIR /app
-
-# Copy project files into the container
 COPY . .
 
-# Install Python dependencies
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
 
-# Command to run your app (adjust if needed)
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
+
 CMD ["python", "main.py"]
