@@ -74,11 +74,6 @@ class FaceAnalyzer:
             if head_pose['orientation'] == 'forward' and gaze_dir == 'center':
                 forward_center = True
                 self.focus_frames += 1.0
-            # Partial focus - head forward but eyes not center
-            elif head_pose['orientation'] == 'forward':
-                forward_center = True  # Still consider this focused
-                self.focus_frames += 0.7
-            # Partial focus - eyes center but head not forward
             elif gaze_dir == 'center':
                 forward_center = True  # Still consider this focused
                 self.focus_frames += 0.7
